@@ -33,3 +33,10 @@ export async function loader({ params }) {
   }
   return selectedNotes;
 }
+
+export function meta({ data }) {
+  return {
+    title: data.title,
+    description: "Manage your notes",
+  };
+}
