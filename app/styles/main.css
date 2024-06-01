@@ -30,11 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(
-    ellipse at top,
-    var(--color-primary-400),
-    var(--color-primary-100)
-  );
+  background: teal;
   min-height: 100vh;
 }
 

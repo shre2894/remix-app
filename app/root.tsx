@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   Meta,
   Outlet,
@@ -34,4 +35,30 @@ export default function App() {
 
 export function links() {
   return [{ rel: "stylesheet", href: MainStyle }];
+}
+
+export function ErrorBoundary({ error }) {
+  return (
+    <html lang="en">
+      <head>
+        <Meta />
+        <Links />
+        <title>An Error Occured!</title>
+      </head>
+      <body>
+        <header>
+          <MainNavigation />
+        </header>
+        <main>
+          <h1>An Error Occured</h1>
+          <p>{error.meesage}</p>
+          <p>
+            Back to <Link to="/">Safety</Link>
+          </p>
+        </main>
+        <ScrollRestoration />
+        <Scripts />
+      </body>
+    </html>
+  );
 }
